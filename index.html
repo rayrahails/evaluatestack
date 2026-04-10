@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- ─── PRIMARY SEO META ─── -->
   <title>EvaluateStack | Custom Evaluation Architecture for Team Staffing Decisions</title>
   <meta name="description"
@@ -180,7 +179,6 @@
     ]
   }
   </script>
-
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -809,6 +807,70 @@
       }
     }
 
+    /* ─── TECHNOLOGY STRIP ─── */
+    .tech-strip {
+      padding: 2.5rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .tech-strip::after {
+      display: none;
+    }
+
+    .tech-strip-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 0.8rem;
+    }
+
+    .tech-strip-names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .tech-strip-names span {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .tech-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--border);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .tech-dot {
+      font-size: 0 !important;
+    }
+
+    .tech-strip-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      .tech-strip-names {
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+      }
+
+      .tech-strip-names span {
+        font-size: 1.05rem;
+      }
+    }
+
     /* ─── SECTIONS ─── */
     section {
       padding: 6rem 3rem;
@@ -1338,7 +1400,7 @@
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
       gap: 4.5rem;
-      align-items: start;
+      align-items: center;
     }
 
     .about-img {
@@ -1354,7 +1416,6 @@
       gap: 0.8rem;
       position: relative;
       overflow: hidden;
-      margin-top: 3rem
     }
 
     .about-img-icon {
@@ -1406,7 +1467,7 @@
     }
 
     .about-skills {
-      display: flex;
+      display: none;
       gap: 0.45rem;
       flex-wrap: wrap;
       margin-top: 1.5rem;
@@ -2085,7 +2146,7 @@
 
 <body>
 
-  <!-- ─── NAV ─── -->
+  <!-- NAV -->
   <nav>
     <div class="nav-logo">
       <a href="#">
@@ -2094,12 +2155,11 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#problem">The Problem</a></li>
-      <li><a href="#process">How I Work</a></li>
-      <li><a href="#deliverables">What You Get</a></li>
-      <li><a href="#why">Why Me</a></li>
+      <li><a href="#system">The System</a></li>
+      <li><a href="#scope">Scope</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://www.linkedin.com/in/rayrahails/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      <li><a href="#contact" class="nav-cta">Request a System Review</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span>
@@ -2108,146 +2168,125 @@
     </button>
   </nav>
 
-  <!-- ─── HERO ─── -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg-accent"></div>
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="hero-eyebrow">Evaluation Architecture</div>
-        <h1>You're Assigning People to Projects <em>on Gut Feel.</em></h1>
-        <p class="hero-sub">And it's costing you. Missed deadlines, blown budgets, and teams that quietly fall
-          apart. I build evaluation systems that actually tell you who can deliver, before you hand them the keys and
-          hope for the best.</p>
+        <div class="hero-eyebrow">Evaluation Systems Architecture</div>
+        <h1>When Evaluation Drives Revenue and Risk, the System Cannot Be Wrong</h1>
+        <p class="hero-sub">I design evaluation systems for high-consequence decisions.
+          People, platforms, models. Before the decision is made, not after it fails.</p>
+        <p style="font: size 1px;rem;color:var(--text-muted);margin-bottom:2.5rem;max-width:520px">When evaluation
+          fails,
+          it is never a people problem. It is a system design problem. I fix the system.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">
-            Let's Fix That
+            Request a System Review
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="#process" class="btn-outline">Here's how I do it ↓</a>
-        </div>
-
-        <div class="hero-proof">
-          <div class="proof-item">
-            <span class="proof-num">Zero</span>
-            <span class="proof-label">templates or off-the-shelf junk</span>
-          </div>
-          <div class="proof-divider"></div>
-          <div class="proof-item">
-            <span class="proof-num">Research-Backed</span>
-            <span class="proof-label">methodology, not guesswork</span>
-          </div>
-          <div class="proof-divider"></div>
-          <div class="proof-item">
-            <span class="proof-num">Built Once</span>
-            <span class="proof-label">used for every staffing decision</span>
-          </div>
+          <a href="#system" class="btn-outline">See the System</a>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="hero-compare">
           <div class="hero-compare-grid">
-            <!-- LEFT: The mess -->
             <div class="compare-before">
-              <div class="compare-label">How most companies do it</div>
-              <div class="compare-title">The Guessing Game</div>
+              <div class="compare-label">What most companies have</div>
+              <div class="compare-title">A Collection of Guesses</div>
               <div class="sticky-notes">
-                <div class="sticky sticky-yellow">"Jake is senior, give it to him"</div>
-                <div class="sticky sticky-pink">"Who's available next week?"</div>
-                <div class="sticky sticky-blue">"She seems motivated"</div>
-                <div class="sticky sticky-green">"He did something similar 2 years ago"</div>
+                <div class="sticky sticky-yellow">"They passed the cert, they're ready"</div>
+                <div class="sticky sticky-pink">"Onboarding went fine, ship it"</div>
+                <div class="sticky sticky-blue">"The model scored 94%, deploy"</div>
+                <div class="sticky sticky-green">"We've always done it this way"</div>
               </div>
-              <div class="compare-result">Result: Missed deadlines. Burned budget. Finger-pointing.</div>
+              <div class="compare-result">Result: Evaluation exists. Signal does not.</div>
             </div>
-
-            <!-- RIGHT: The system -->
             <div class="compare-after">
-              <div class="compare-label">How it should work</div>
-              <div class="compare-title">The System</div>
+              <div class="compare-label">What an evaluation system produces</div>
+              <div class="compare-title">Decision-Grade Signal</div>
               <table class="eval-table">
                 <thead>
                   <tr>
                     <th>Capability</th>
                     <th>Required</th>
-                    <th>Sarah M.</th>
+                    <th>Actual</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="eval-skill">Ambiguity Tolerance</td>
+                    <td class="eval-skill">Production Readiness</td>
                     <td>
                       <div class="eval-bar-wrap">
                         <div class="eval-bar required" style="width:52px"></div><span
-                          class="eval-pct neutral">80%</span>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="eval-bar-wrap">
-                        <div class="eval-bar match" style="width:55px"></div><span class="eval-pct good">85%</span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="eval-skill">Stakeholder Mgmt</td>
-                    <td>
-                      <div class="eval-bar-wrap">
-                        <div class="eval-bar required" style="width:46px"></div><span
-                          class="eval-pct neutral">70%</span>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="eval-bar-wrap">
-                        <div class="eval-bar match" style="width:49px"></div><span class="eval-pct good">75%</span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="eval-skill">Technical Design</td>
-                    <td>
-                      <div class="eval-bar-wrap">
-                        <div class="eval-bar required" style="width:58px"></div><span
                           class="eval-pct neutral">90%</span>
                       </div>
                     </td>
                     <td>
                       <div class="eval-bar-wrap">
-                        <div class="eval-bar gap" style="width:39px"></div><span class="eval-pct warn">60%</span>
+                        <div class="eval-bar match" style="width:48px"></div><span class="eval-pct good">82%</span>
                       </div>
                     </td>
                   </tr>
                   <tr>
-                    <td class="eval-skill">Decisions Under Pressure</td>
+                    <td class="eval-skill">Failure Mode Handling</td>
                     <td>
                       <div class="eval-bar-wrap">
-                        <div class="eval-bar required" style="width:49px"></div><span
+                        <div class="eval-bar required" style="width:46px"></div><span
+                          class="eval-pct neutral">85%</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="eval-bar-wrap">
+                        <div class="eval-bar gap" style="width:33px"></div><span class="eval-pct warn">58%</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="eval-skill">System Integration</td>
+                    <td>
+                      <div class="eval-bar-wrap">
+                        <div class="eval-bar required" style="width:42px"></div><span
                           class="eval-pct neutral">75%</span>
                       </div>
                     </td>
                     <td>
                       <div class="eval-bar-wrap">
-                        <div class="eval-bar match" style="width:52px"></div><span class="eval-pct good">80%</span>
+                        <div class="eval-bar match" style="width:46px"></div><span class="eval-pct good">80%</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="eval-skill">Decision Under Ambiguity</td>
+                    <td>
+                      <div class="eval-bar-wrap">
+                        <div class="eval-bar required" style="width:46px"></div><span
+                          class="eval-pct neutral">80%</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="eval-bar-wrap">
+                        <div class="eval-bar match" style="width:49px"></div><span class="eval-pct good">85%</span>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
               <div class="match-badge">
-                <div class="match-badge-icon">
-                  <svg viewBox="0 0 16 16">
+                <div class="match-badge-icon"><svg viewBox="0 0 16 16">
                     <path d="M4 8.5l3 3L12 5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
+                  </svg></div>
                 <div>
-                  <div class="match-score">Match: 82%</div>
-                  <div class="match-detail">Ready with support on Technical Design</div>
+                  <div class="match-score">Confidence: High</div>
+                  <div class="match-detail">Gap identified in Failure Mode Handling. Remediation path defined.</div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Arrow: adjust top: 20% to move it up/down -->
           <div class="compare-arrow">
             <svg viewBox="0 0 16 16">
               <path d="M4 8h8M9 5l3 3-3 3" stroke-linecap="round" stroke-linejoin="round" />
@@ -2258,13 +2297,30 @@
     </div>
   </section>
 
-  <!-- ─── PROBLEM ─── -->
+  <!-- TECHNOLOGY STRIP -->
+  <section class="tech-strip">
+    <div class="section-inner">
+      <p class="tech-strip-label">Evaluation systems designed for</p>
+      <div class="tech-strip-names">
+        <span>Cisco</span>
+        <span class="tech-dot"></span>
+        <span>Microsoft</span>
+        <span class="tech-dot"></span>
+        <span>VMware</span>
+        <span class="tech-dot"></span>
+        <span>IBM</span>
+      </div>
+      <p class="tech-strip-sub">12+ years of certification-grade assessment architecture.</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
   <section class="problem" id="problem">
     <div class="section-inner">
-      <span class="section-label">Sound Familiar?</span>
-      <h2 class="section-title">Three Ways You're Losing Money Right Now</h2>
-      <p class="section-desc">I'm not going to sugarcoat it. If you don't have a real evaluation system, you're making
-        million-dollar staffing decisions with basically no data. Here's how that usually plays out.</p>
+      <span class="section-label">The Problem</span>
+      <h2 class="section-title">Most Companies Do Not Have an Evaluation System. They Have a Collection of Guesses.</h2>
+      <p class="section-desc">As companies scale, the things they rely on to evaluate readiness quietly stop working.
+      </p>
 
       <div class="problem-grid">
         <div class="problem-card">
@@ -2273,17 +2329,10 @@
                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg></div>
-            <span class="p-card-num">01</span>
           </div>
-          <h3>"He's Senior, He Can Handle It"</h3>
-          <p>Famous last words. You put your best developer on an architecture project. Turns out they're a brilliant
-            executor, not a system thinker. Three weeks in, the project is quietly drowning and nobody wants to say it
-            out loud.</p>
-          <div class="p-callout">
-            <div class="p-callout-num">37%</div>
-            <div class="p-callout-text">of projects fail due to lack of clear objectives and poor resource matching (PMI
-              Pulse of the Profession)</div>
-          </div>
+          <h3>Your Readiness Signals Are Unreliable</h3>
+          <p>Someone passed. Someone was onboarded. Someone scored well. None of that tells you whether they can perform
+            when the decision actually matters.</p>
         </div>
 
         <div class="problem-card">
@@ -2294,17 +2343,10 @@
                 <circle cx="12" cy="12" r="6" />
                 <circle cx="12" cy="12" r="2" />
               </svg></div>
-            <span class="p-card-num">02</span>
           </div>
-          <h3>Your Assessments Are Basically Trivia Night</h3>
-          <p>Multiple choice questions about definitions. Fill-in-the-blanks about frameworks. Cool. Now you know who
-            has a good memory. You still have no idea who can actually think under pressure when the project goes
-            sideways.</p>
-          <div class="p-callout">
-            <div class="p-callout-num">2.5×</div>
-            <div class="p-callout-text">higher predictive validity from work sample tests vs traditional interviews
-              (Schmidt &amp; Hunter, 1998)</div>
-          </div>
+          <h3>What Worked at 20 Collapses at 200</h3>
+          <p>The evaluation process that got you here stops working as you scale. Standards drift. Signal degrades.
+            Decisions that used to be obvious become arguments.</p>
         </div>
 
         <div class="problem-card">
@@ -2313,428 +2355,301 @@
                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 20V10M12 20V4M6 20v-6" />
               </svg></div>
-            <span class="p-card-num">03</span>
           </div>
-          <h3>"They Scored 78%"... Great, Now What?</h3>
-          <p>Your current tools spit out a number and call it a day. But you need to know: can this person lead the data
-            migration? Can they handle client escalations? A percentage tells you absolutely nothing useful.</p>
-          <div class="p-callout">
-            <div class="p-callout-num">0</div>
-            <div class="p-callout-text">useful staffing decisions come from a score without context (Harvard Business
-              Review)</div>
-          </div>
+          <h3>Decisions Get Made on Opinion</h3>
+          <p>Every team defines "ready" differently. There is no shared standard. No shared measurement. The
+            organization is making consequential decisions without a system to support them.</p>
         </div>
+      </div>
+
+      <div
+        style="margin-top:2.5rem;padding:1.2rem 1.6rem;background:var(--bg-card);border:1.5px solid var(--border);border-left:4px solid var(--navy);border-radius:0 10px 10px 0;max-width:640px">
+        <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">The real problem is not bad assessments. It
+          is the absence of a system that defines what "ready" means, how it is measured, and how signal is preserved as
+          the organization grows.</p>
       </div>
     </div>
   </section>
 
-  <!-- ─── PROCESS ─── -->
-  <section id="process">
+  <!-- POSITIONING: I Design the System Behind the Decision -->
+  <section id="system">
     <div class="section-inner">
-      <span class="section-label">How I Work</span>
-      <h2 class="section-title">No Fluff. No Templates. Here's What Actually Happens.</h2>
-      <p class="section-desc">I sit down with your team, figure out what you're actually trying to evaluate, and build
-        the whole thing from scratch. Most of my clients say "why didn't we do this years ago."</p>
+      <span class="section-label">The Work</span>
+      <h2 class="section-title">I Design the System Behind the Decision.</h2>
+      <p class="section-desc">The work starts before tools. Before assessments. Before content. It starts with a
+        question most organizations skip: what does your evaluation system need to be true for leadership to trust it?
+      </p>
 
       <div class="process-grid">
         <div class="step-card">
-          <div class="step-badge">01</div>
-          <h3>I Learn Your World</h3>
-          <p>What does your next project actually need? Not the job description. The real skills. The ones that
-            separate "this shipped on time" from "this was a disaster nobody saw coming."</p>
+          <div class="step-badge" style="background:var(--navy)">01</div>
+          <h3>Defining Capability</h3>
+          <p>What does "ready" actually mean for this role, this platform, this decision? Not job descriptions. Precise,
+            measurable definitions of capability that hold up under scrutiny.</p>
         </div>
         <div class="step-card">
-          <div class="step-badge">02</div>
-          <h3>I Build the Questions That Matter</h3>
-          <p>Using proprietary assessment tools and years of design experience, I create scenario-based evaluations that
-            test how
-            people think, not whether they can Google the answer fast enough.</p>
+          <div class="step-badge" style="background:var(--navy-light)">02</div>
+          <h3>Designing Measurement</h3>
+          <p>Building the evaluation architecture that produces reliable signal. Scenario-based, context-specific,
+            calibrated to detect the difference between knowing and performing.</p>
         </div>
         <div class="step-card">
-          <div class="step-badge">03</div>
-          <h3>Every Answer Tells You Something</h3>
-          <p>No more mystery scores. Every response maps to a specific capability your project requires. You'll see
-            exactly where someone is strong and where the gaps are.</p>
+          <div class="step-badge" style="background:var(--navy-muted)">03</div>
+          <h3>Ensuring Consistency at Scale</h3>
+          <p>One team, one hundred teams. The system produces the same quality of signal regardless of who administers
+            it, where it runs, or how many people go through it.</p>
         </div>
         <div class="step-card">
-          <div class="step-badge">04</div>
-          <h3>You Make Decisions With Confidence</h3>
-          <p>Next time someone asks "who should lead this?" you'll have an answer that isn't a guess. And you'll be
-            able to defend it if anyone pushes back.</p>
+          <div class="step-badge" style="background:var(--gold)">04</div>
+          <h3>Connecting Evaluation to Decisions</h3>
+          <p>Evaluation that does not connect to a decision is wasted effort. Every system I design produces output that
+            leadership can act on with confidence.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── CASE STUDIES ─── -->
-  <section class="cases" id="results">
+  <!-- SYSTEM SCOPE -->
+  <section class="problem" id="scope">
     <div class="section-inner">
-      <span class="section-label">Real Results</span>
-      <h2 class="section-title">This Is What It Looks Like In Practice</h2>
-      <p class="section-desc">Two different companies. Two different problems. Same approach: stop guessing, start
-        measuring.</p>
+      <span class="section-label">System Scope</span>
+      <h2 class="section-title">What the System Covers</h2>
+      <p class="section-desc">The architecture spans the full evaluation lifecycle. Each component is designed to
+        produce decision-grade signal.</p>
 
-      <div class="cases-grid">
-        <div class="case-card">
-          <div class="case-tag">Web Development</div>
-          <h3>4 Dev Teams. Zero Clarity on Who Could Actually Ship.</h3>
-          <p>A mid-size SaaS company had four web development teams and a backlog of projects piling up. Leadership kept
-            assigning work based on availability and seniority. Two projects had already missed their deadlines by 3+
-            weeks.</p>
-          <p>I mapped the capabilities of all four teams against the actual project requirements. Not just "frontend vs
-            backend" but the specific skills each project demanded: API architecture, legacy code migration,
-            client-facing delivery under pressure, cross-team dependency management.</p>
-          <p>The result? Three of the four teams had critical blind spots that nobody had identified. One team that was
-            consistently overlooked for high-profile work turned out to be the strongest match for the company's most
-            complex project. Within one quarter, on-time delivery improved by 35% and the two stalled projects shipped
-            within weeks of reassignment.</p>
-          <div class="case-result">
-            <div class="case-result-num">35%</div>
-            <div class="case-result-text">improvement in on-time delivery after capability-based reassignment</div>
-          </div>
-        </div>
-
-        <div class="case-card">
-          <div class="case-tag">Enterprise IT</div>
-          <h3>$2M Infrastructure Project. Wrong Team Lead. Caught It Before Launch.</h3>
-          <p>A financial services firm was about to assign their most senior engineer to lead a cloud migration project.
-            On paper, perfect fit. 10 years of experience. Great track record.</p>
-          <p>I ran a capability evaluation across the project's actual requirements: vendor negotiation,
-            cross-department stakeholder alignment, regulatory compliance documentation, and real-time incident
-            escalation. The senior engineer scored exceptionally on technical execution but had significant gaps in
-            stakeholder management and compliance documentation, two capabilities that this specific project depended on
-            heavily.</p>
-          <p>They reassigned the lead role to a less senior but better-matched engineer and moved the original candidate
-            to the technical architecture role where his strengths actually lived. The project launched on schedule and
-            passed its first compliance audit without a single revision.</p>
-          <div class="case-result">
-            <div class="case-result-num">$2M</div>
-            <div class="case-result-text">project launched on time with zero compliance revisions after
-              capability-matched staffing</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── WHO THIS IS FOR ─── -->
-  <section class="for-who" id="fit">
-    <div class="section-inner">
-      <span class="section-label">Is This For You?</span>
-      <h2 class="section-title">Built for Teams Where One Wrong Assignment Costs Real Money</h2>
-      <p class="section-desc">This isn't for everyone. Here's who gets the most out of working with me.</p>
-
-      <div class="for-grid">
-        <div class="for-card">
-          <div class="for-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg></div>
-          <h3>50+ Person Teams</h3>
-          <p>You have enough people that gut-feel assignment doesn't scale anymore. Too many projects, too many
-            variables, too many ways to get the match wrong.</p>
-        </div>
-        <div class="for-card">
-          <div class="for-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg></div>
-          <h3>High-Stakes Projects</h3>
-          <p>When one wrong assignment costs six figures in delays, rework, or missed opportunities. You can't afford to
-            discover the mismatch three weeks in.</p>
-        </div>
-        <div class="for-card">
-          <div class="for-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg></div>
-          <h3>Engineering, IT, or Technical Operations</h3>
-          <p>My background is in technical evaluation. Cisco, Microsoft, VMware, SaaS platforms. If your team builds,
-            ships, or maintains technology, I speak the language.</p>
-        </div>
-        <div class="for-card">
-          <div class="for-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="12" />
-              <line x1="12" y1="16" x2="12.01" y2="16" />
-            </svg></div>
-          <h3>Tired of Generic Tools</h3>
-          <p>You've tried HackerRank, Codility, or whatever your HR team bought. The scores don't translate into real
-            staffing decisions. You need something built for YOUR projects.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── DELIVERABLES ─── -->
-  <section class="deliverables" id="deliverables">
-    <div class="section-inner">
-      <span class="section-label">What You Get</span>
-      <h2 class="section-title">Not a Report. A Working System.</h2>
-      <p class="section-desc">When we're done, you don't get a PDF that collects dust. You get a system your team
-        actually uses, every time a project needs people.</p>
-
-      <div class="del-grid">
-        <div class="del-card del-main">
-          <div class="del-num">01</div>
-          <h3>Capability Map</h3>
-          <p>A detailed breakdown of every project role's actual requirements. Not generic competencies. The specific,
-            measurable capabilities that determine success or failure on YOUR projects.</p>
-        </div>
-        <div class="del-card">
-          <div class="del-num">02</div>
-          <h3>Custom Assessment Bank</h3>
-          <p>Scenario-based evaluations designed specifically for your roles. Questions that test thinking, judgement,
-            and applied skill. Not trivia.</p>
-        </div>
-        <div class="del-card">
-          <div class="del-num">03</div>
-          <h3>Scoring Framework</h3>
-          <p>A clear, repeatable system for interpreting results. Every response maps to a specific capability so you
-            see exactly where someone is strong and where the gaps are.</p>
-        </div>
-        <div class="del-card">
-          <div class="del-num">04</div>
-          <h3>Staffing Recommendation Report</h3>
-          <p>For each project, a data-backed recommendation on who's ready, who needs support, and where you might need
-            to bring in outside help. Defensible if anyone asks "why them?"</p>
-        </div>
-        <div class="del-card">
-          <div class="del-num">05</div>
-          <h3>Quarterly Recalibration (Optional)</h3>
-          <p>Teams grow. Projects change. I come back every quarter to update the capability maps, refresh the
-            assessment bank, and make sure the system stays accurate as your company evolves.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── WHO THIS IS FOR ─── -->
-  <section class="problem" id="fit">
-    <div class="section-inner">
-      <span class="section-label">Is This For You?</span>
-      <h2 class="section-title">This Is Built for Companies Where Getting It Wrong Is Expensive</h2>
-      <p class="section-desc" style="max-width:680px">If your team is 50+ people and a single bad project assignment
-        costs you weeks of lost time and six figures in wasted budget, this is for you. If your current process for
-        deciding who leads what is "who's available" and "who seems like a good fit," we should talk.</p>
       <div class="diff-grid">
         <div class="diff-card">
           <div class="diff-icon d-icon-1"><svg viewBox="0 0 24 24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round"
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg></div>
           <div class="diff-text">
-            <h3>Small and Mid-Size Tech Teams</h3>
-            <p>50 to 500 person companies where every project assignment is a high-stakes bet and there's no room for
-              trial and error.</p>
+            <h3>Capability and Role Architecture</h3>
+            <p>Structured definitions of what each role requires, broken into discrete, measurable capabilities.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon d-icon-2"><svg viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M22 4L12 14.01l-3-3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <div class="diff-text">
+            <h3>Certification and Readiness Criteria</h3>
+            <p>Clear thresholds that define when someone or something is ready for production, deployment, or promotion.
+            </p>
           </div>
         </div>
         <div class="diff-card">
           <div class="diff-icon d-icon-3"><svg viewBox="0 0 24 24">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
-                stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
             </svg></div>
           <div class="diff-text">
-            <h3>Engineering, SaaS, and Platform Teams</h3>
-            <p>Companies building software products where the difference between the right person and the wrong person
-              on a project shows up in code, timelines, and customer impact.</p>
+            <h3>Assessment Infrastructure</h3>
+            <p>The evaluation framework itself. Scenario-based, calibrated, and designed to detect real capability
+              rather than recall.</p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon d-icon-1"><svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="8.5" cy="7" r="4" />
+              <line x1="20" y1="8" x2="20" y2="14" />
+              <line x1="23" y1="11" x2="17" y2="11" />
+            </svg></div>
+          <div class="diff-text">
+            <h3>Developer Onboarding and Readiness</h3>
+            <p>Evaluation systems that determine whether developers are production-ready, not just orientation-complete.
+            </p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon d-icon-2"><svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <div class="diff-text">
+            <h3>Evaluation with Validation Controls</h3>
+            <p>Automated evaluation pipelines with human-in-the-loop validation to ensure signal remains trustworthy.
+            </p>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon d-icon-4"><svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <line x1="10" y1="9" x2="8" y2="9" />
+            </svg></div>
+          <div class="diff-text">
+            <h3>Governance and Quality Controls</h3>
+            <p>Review cycles, version control, and audit trails that keep the system defensible over time.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── WHAT YOU GET ─── -->
-  <section id="deliverables">
+  <!-- DIFFERENTIATION -->
+  <section id="why">
     <div class="section-inner">
-      <span class="section-label">What You Get</span>
-      <h2 class="section-title">Here's Exactly What I Deliver</h2>
-      <p class="section-desc">No vague "evaluation framework" hand-waving. Here's the actual output of a typical
-        engagement, week by week.</p>
+      <span class="section-label">Differentiation</span>
+      <h2 class="section-title">This Is Not Typical Assessment Work.</h2>
+      <p class="section-desc">Most teams produce content. Tests, rubrics, checklists. That is execution. What I do is
+        different.</p>
+
+      <div class="diff-grid">
+        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
+          <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy)">Most teams build assessments.</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">They write questions, create rubrics, set
+            pass/fail thresholds. The focus is on content production. When the content stops working, they produce more
+            content.</p>
+        </div>
+        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
+          <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy)">I design systems.</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">The architecture that determines what gets
+            measured, how signal is preserved, and what must remain true at scale. The goal is not more content. It is a
+            system that leadership can trust when the decision matters.</p>
+        </div>
+      </div>
+
+      <div
+        style="margin-top:2rem;padding:1.2rem 1.6rem;background:var(--bg-card);border:1.5px solid var(--border);border-left:4px solid var(--brand-red);border-radius:0 10px 10px 0;max-width:640px">
+        <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">When evaluation becomes unreliable, it does
+          not just fail quietly. It becomes a liability. Decisions get challenged. Certifications lose credibility.
+          Teams lose confidence in the process. The cost is not just inefficiency. It is institutional trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / SYSTEM FAILURE FRAMING -->
+  <section class="problem">
+    <div class="section-inner">
+      <span class="section-label">Perspective</span>
+      <h2 class="section-title">This Was Not a People Problem. It Was a System Design Problem.</h2>
+      <p class="section-desc" style="max-width:660px">A platform team certified 40 developers as production-ready.
+        Within the first quarter, 12 of them required significant support to handle real workloads. The developers were
+        not the problem. The certification system was measuring the wrong things.</p>
+
+      <div class="diff-grid">
+        <div class="diff-card" style="flex-direction:column;gap:0.6rem">
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--brand-red)">What the system tested</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">Knowledge recall. Framework vocabulary.
+            Textbook scenarios with clear right answers.</p>
+        </div>
+        <div class="diff-card" style="flex-direction:column;gap:0.6rem">
+          <h3 style="font-size:0.95rem;font-weight:700;color:#3a7d52">What production actually required</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.7">Debugging under ambiguity. Making tradeoff
+            decisions with incomplete data. Communicating failure modes to non-technical stakeholders. Navigating system
+            dependencies they had never seen in a controlled environment.</p>
+        </div>
+      </div>
+
+      <p style="font-size:0.95rem;color:var(--text-body);line-height:1.8;margin-top:2rem;max-width:620px">The fix was
+        not better questions. It was a redesigned system that measured capability at the level production actually
+        demands. That is the work I do.</p>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section id="engagement">
+    <div class="section-inner">
+      <span class="section-label">Engagements</span>
+      <h2 class="section-title">How Engagements Typically Begin</h2>
+      <p class="section-desc">Every engagement starts with understanding the decision the evaluation system needs to
+        support.</p>
+
       <div class="process-grid">
         <div class="step-card">
           <div class="step-badge" style="background:var(--navy)">01</div>
-          <h3>Capability Map</h3>
-          <p>A detailed breakdown of every capability each project role requires. Not job descriptions. The actual
-            skills that determine success or failure. Delivered in weeks 1 to 2.</p>
+          <h3>System Design</h3>
+          <p>Designing a new evaluation system from the ground up. Capability definitions, measurement architecture, and
+            decision frameworks.</p>
         </div>
         <div class="step-card">
           <div class="step-badge" style="background:var(--navy-light)">02</div>
-          <h3>Custom Assessment Bank</h3>
-          <p>50+ scenario-based evaluations designed specifically for your roles and projects. Every question maps to a
-            specific capability. No trivia. Delivered in weeks 3 to 4.</p>
+          <h3>System Redesign</h3>
+          <p>Auditing and restructuring an existing evaluation system that has stopped producing reliable signal.</p>
         </div>
         <div class="step-card">
           <div class="step-badge" style="background:var(--navy-muted)">03</div>
-          <h3>Scoring Framework</h3>
-          <p>A matching system that maps individual results directly to project requirements. You'll see exactly who's
-            ready, who needs support, and where the gaps are. Delivered in week 5.</p>
+          <h3>Infrastructure Setup</h3>
+          <p>Building the assessment infrastructure, scoring frameworks, and governance structures needed to operate the
+            system.</p>
         </div>
         <div class="step-card">
           <div class="step-badge" style="background:var(--gold)">04</div>
-          <h3>Staffing Report</h3>
-          <p>A clear, defensible recommendation for your next project assignment. The document you take into a meeting
-            when someone asks "why did we pick this person?" Delivered in week 6.</p>
+          <h3>Evaluation Pipelines</h3>
+          <p>Designing automated evaluation pipelines with validation controls for continuous assessment at scale.</p>
         </div>
       </div>
+
       <div
         style="margin-top:2.5rem;padding:1.4rem 1.8rem;background:#fff;border:1.5px solid var(--border);border-left:4px solid var(--navy);border-radius:0 12px 12px 0;max-width:580px;box-shadow:0 2px 12px rgba(26,39,68,0.06)">
         <span
-          style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--navy);display:block;margin-bottom:0.3rem">Typical
-          engagements run 4 to 8 weeks.</span>
-        <span style="font-size:0.92rem;color:var(--text-body);line-height:1.6">After the initial build, I offer
-          quarterly recalibration to keep the system accurate as your team and projects evolve.</span>
+          style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--navy);display:block;margin-bottom:0.3rem">Pricing
+          reflects decision impact, not hours.</span>
+        <span style="font-size:0.92rem;color:var(--text-body);line-height:1.6">Engagements are scoped based on system
+          complexity, team scale, and the consequence weight of the decisions the system supports.</span>
       </div>
     </div>
   </section>
 
-  <!-- ─── CASE STUDY / METHODOLOGY PREVIEW ─── -->
-  <section class="problem" id="proof">
+  <!-- FIT / NON-FIT -->
+  <section class="problem" id="fit">
     <div class="section-inner">
-      <span class="section-label">How Deep Does This Go?</span>
-      <h2 class="section-title">Most Companies Evaluate for 3 Things. I Typically Identify 15.</h2>
-      <p class="section-desc" style="max-width:680px">Here's a real example of the difference. When a company says they
-        need a "senior developer" for a project, they usually test for coding ability, years of experience, and maybe
-        some technical knowledge. That's 3 data points. My approach breaks the same role into discrete, measurable
-        capabilities:</p>
-      <div class="diff-grid" style="margin-bottom:2rem">
-        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
-          <h3 style="font-size:0.95rem;font-weight:700;color:var(--brand-red)">What most companies test</h3>
-          <p style="font-size:0.88rem;color:var(--text-body);line-height:1.7">Coding ability. Years of experience.
-            Technical knowledge. That's it. Three data points for a decision worth six figures.</p>
-        </div>
-        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
-          <h3 style="font-size:0.95rem;font-weight:700;color:#3a7d52">What I map for the same role</h3>
-          <p style="font-size:0.88rem;color:var(--text-body);line-height:1.7">Can decompose ambiguous requirements under
-            deadline pressure. Can manage stakeholder conflict across departments without escalation. Can make
-            architectural decisions with incomplete information. Can communicate technical tradeoffs to non-technical
-            leadership. Can mentor junior developers while maintaining delivery velocity. And 10 more, specific to your
-            project.</p>
-        </div>
-      </div>
-      <p style="font-size:0.95rem;color:var(--text-body);line-height:1.8;max-width:620px">This is the same rigor that
-        goes into building a Cisco or Microsoft certification exam, where the questions determine whether someone is
-        qualified to manage enterprise infrastructure worth millions. I've spent over 12 years designing exactly this
-        kind of assessment. Now I apply that precision to your staffing decisions.</p>
-    </div>
-  </section>
-
-  <!-- ─── DIFFERENTIATORS ─── -->
-  <section class="diff" id="why">
-    <div class="section-inner">
-      <span class="section-label">Why This Is Different</span>
-      <h2 class="section-title">You Could Buy a Tool. But That's Not What You Need.</h2>
-      <p class="section-desc">HackerRank, Codility, generic HR platforms. They all sell you a product. I build you a
-        system. There's a massive difference, and your projects will feel it.</p>
+      <span class="section-label">Fit</span>
+      <h2 class="section-title">Is This the Right Engagement?</h2>
 
       <div class="diff-grid">
-        <div class="diff-card">
-          <div class="diff-icon d-icon-1">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="diff-text">
-            <h3>Built Around Your Reality</h3>
-            <p>Your company isn't generic, so why would your evaluation system be? I design around your actual
-              projects, your actual roles, and the actual decisions you're trying to make. Not some template that
-              kinda-sorta fits.</p>
-          </div>
+        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
+          <h3 style="font-size:1.05rem;font-weight:700;color:#3a7d52">This is a fit if you are working on</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.9">
+            Certification systems that need to predict real performance.<br>
+            Developer platforms where readiness evaluation affects production.<br>
+            API onboarding where partner quality directly impacts revenue.<br>
+            Any evaluation system where the decision it supports is high-consequence.
+          </p>
         </div>
-        <div class="diff-card">
-          <div class="diff-icon d-icon-2">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4zm0 2a2 2 0 0 1 2 2v2h-4V6a2 2 0 0 1 2-2z"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="diff-text">
-            <h3>Engineered at Scale. Designed by Hand.</h3>
-            <p>I use advanced tooling, including automation and modern assessment technology, to generate, calibrate,
-              and stress-test content at scale. But the architecture, the decisions about what to measure and why, that
-              comes from experience you can't automate.</p>
-          </div>
-        </div>
-        <div class="diff-card">
-          <div class="diff-icon d-icon-3">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
-                stroke-linecap="round" />
-            </svg>
-          </div>
-          <div class="diff-text">
-            <h3>Tests Thinking, Not Memorization</h3>
-            <p>I don't write "What is Agile?" questions. I write "Your sprint is on fire, the client just changed scope,
-              and your lead developer is on vacation. What do you do?" That's what real work looks like.</p>
-          </div>
-        </div>
-        <div class="diff-card">
-          <div class="diff-icon d-icon-4">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="diff-text">
-            <h3>Holds Up When It Matters</h3>
-            <p>These systems get used for real decisions: promotions, project assignments, team restructuring. When
-              someone asks "why did you pick them?" you need an answer that doesn't crumble. That's what I build.</p>
-          </div>
+        <div class="diff-card" style="flex-direction:column;gap:0.8rem">
+          <h3 style="font-size:1.05rem;font-weight:700;color:var(--brand-red)">This is not a fit if you need</h3>
+          <p style="font-size:0.95rem;color:var(--text-body);line-height:1.9">
+            One-off test creation or content writing.<br>
+            Low-budget assessment content production.<br>
+            Hiring-only screening tools.<br>
+            Academic testing or research evaluation.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── ABOUT ─── -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-img" style="background:none;border:none">
+      <div class="about-grid" style="align-items:start">
+        <div class="about-img" style="background:none;border:none;margin-top:2rem">
           <img src="images/rahail.png" alt="Rahail Salamat"
-            style="width:100%;height:100%;object-fit:cover;border-radius:14px; object-position: top center" />
+            style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:14px" />
         </div>
         <div class="about-content">
           <span class="section-label">The Person Behind This</span>
           <h3>I've Been Designing Evaluation Systems Before Most Companies Knew They Needed One</h3>
-          <p>Most people think evaluation is about writing questions. It's not. It's about understanding what actually
-            matters in a role, breaking it down into measurable capabilities, and building a system that separates the
-            people who know the vocabulary from the people who can actually do the work.</p>
-          <p>That's what I've been doing for over 15 years.</p>
-          <p>I started by building certification assessment content for Cisco, Microsoft, VMware, and IBM. Not the easy
-            stuff. The questions that determine whether someone is qualified to manage enterprise infrastructure worth
-            millions. The kind of evaluation where getting it wrong means putting an unqualified person in charge of
-            systems that entire companies depend on.</p>
-          <p>From there I moved into technical documentation architecture for SaaS platforms, working side by side with
-            engineering teams to build structured systems that translate what people actually do into clear, measurable
-            frameworks.</p>
-          <p>EvaluateStack is where all of that comes together. I take the same precision that goes into a certification
-            exam, the same structured thinking that goes into documentation architecture, and I apply it to your
-            staffing decisions. The result is an evaluation system built specifically for your projects, your roles, and
-            the actual capabilities that determine whether someone delivers or doesn't.</p>
-          <p>I'm not an HR consultant who learned about assessments from a textbook. I'm a systems architect who's spent
-            over a decade figuring out how to measure whether someone can actually do the job. There's a difference, and
-            your projects will feel it.</p>
+          <p>15 years designing the evaluation systems that determine whether people are qualified to manage enterprise
+            infrastructure worth millions. Cisco, Microsoft, VMware, IBM.</p>
+          <p>The same precision now applied to the decisions your organization makes about readiness, deployment, and
+            capability.</p>
+          <p>I do not write assessments. I design the system that makes your decisions defensible.</p>
           <div class="about-skills">
             <span class="skill-tag">Evaluation Systems Architecture</span>
             <span class="skill-tag">Certification Assessment Design</span>
             <span class="skill-tag">Capability Mapping</span>
             <span class="skill-tag">Scenario-Based Evaluation</span>
             <span class="skill-tag">Technical Documentation Architecture</span>
-            <span class="skill-tag">Enterprise Tech (Cisco, Microsoft, VMware, IBM)</span>
           </div>
           <p
-            style="font-size:0.85rem;color:var(--text-muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border-light);line-height:1.6">
+            style="font-size:0.88rem;color:var(--text-muted);margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border-light);line-height:1.6">
             Built on 12+ years of designing certification assessments used by thousands of professionals worldwide for
             Cisco, Microsoft, VMware, and IBM.</p>
         </div>
@@ -2742,17 +2657,15 @@
     </div>
   </section>
 
-  <!-- ─── CTA ─── -->
+  <!-- CTA -->
   <section class="cta" id="contact">
     <div class="cta-inner">
-      <span class="section-label">Enough Reading</span>
-      <h2>Let's Talk About <em>Your Evaluation Problem.</em></h2>
-      <p>I'll walk you through exactly how I'd evaluate your current staffing process and where the gaps are. You just
-        show up. No pitch deck. No pressure. Just a straight conversation about what's not working and what I'd build to
-        fix it.</p>
+      <span class="section-label">Start Here</span>
+      <h2>If Evaluation Quality Matters, Start With the System.</h2>
+      <p>A 30-minute conversation about the evaluation decisions your organization depends on and whether the system
+        behind them is sound.</p>
 
       <div class="cta-split">
-        <!-- Left: Calendar booking -->
         <div class="cta-book">
           <div class="cta-book-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -2764,35 +2677,27 @@
               <circle cx="12" cy="16" r="1.5" />
             </svg>
           </div>
-          <h3 class="cta-book-title">Prefer a live conversation?</h3>
-          <p class="cta-book-desc">Pick a 30-minute slot that works for you. I'll come prepared with questions about
-            your evaluation challenge.</p>
-          <!-- Replace this URL with your actual Calendly/Cal.com link -->
+          <h3 class="cta-book-title">Request a system review</h3>
+          <p class="cta-book-desc">30 minutes. I come prepared. We discuss the evaluation decisions your system needs to
+            support and where it currently falls short.</p>
           <a href="https://calendly.com/rahails-_mv/30min" target="_blank" rel="noopener" class="btn-cta-primary">
-            Grab 30 Minutes With Me
+            Schedule a Conversation
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <span class="cta-book-note">Free. No commitment. We'll figure out if there's a fit.</span>
+          <span class="cta-book-note">No commitment. No pitch. A direct conversation.</span>
         </div>
 
-        <div class="cta-divider">
-          <span>or</span>
-        </div>
+        <div class="cta-divider"><span>or</span></div>
 
-        <!-- Right: Contact form -->
         <div class="cta-form-wrap">
-          <h3 class="cta-form-title" id="formTitle">Send me a message</h3>
-
-          <!-- Netlify Forms: just deploy to Netlify and this works automatically -->
+          <h3 class="cta-form-title" id="formTitle">Send a message</h3>
           <form class="cta-form" id="contactForm" name="evaluatestack-contact" method="POST" data-netlify="true"
             netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="evaluatestack-contact" />
-            <p class="hidden-field" style="display:none"><label>Don't fill this out: <input name="bot-field" /></label>
-            </p>
-
+            <p style="display:none"><label>Do not fill this out: <input name="bot-field" /></label></p>
             <div class="form-group">
               <label for="contactName">Name</label>
               <input type="text" id="contactName" name="name" placeholder="Your name" required />
@@ -2803,12 +2708,12 @@
             </div>
             <div class="form-group">
               <label for="contactCompany">Company</label>
-              <input type="text" id="contactCompany" name="company" placeholder="Your company name" />
+              <input type="text" id="contactCompany" name="company" placeholder="Your company" />
             </div>
             <div class="form-group">
-              <label for="contactMsg">What's the evaluation challenge?</label>
+              <label for="contactMsg">What evaluation challenge are you facing?</label>
               <textarea id="contactMsg" name="message" rows="4"
-                placeholder="Tell me a bit about what you're trying to evaluate, the size of your team, and what's not working today..."></textarea>
+                placeholder="Describe the evaluation system or decision you need help with."></textarea>
             </div>
             <button type="submit" class="btn-cta-submit">
               Send Message
@@ -2819,8 +2724,6 @@
             </button>
             <span class="form-note" id="formNote"></span>
           </form>
-
-          <!-- Thank you message (hidden by default) -->
           <div class="thank-you" id="thankYou">
             <div class="thank-you-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -2830,38 +2733,35 @@
               </svg>
             </div>
             <h3 class="thank-you-title">Message received.</h3>
-            <p class="thank-you-text">I'll read through your details and get back to you within 24 hours. If it's
-              urgent, grab a slot on my calendar instead.</p>
-            <a href="https://calendly.com/rahails-_mv/30min" target="_blank" rel="noopener" class="thank-you-link">Book
-              a call instead →</a>
+            <p class="thank-you-text">I will review your details and respond within 24 hours.</p>
+            <a href="https://calendly.com/rahails-_mv/30min" target="_blank" rel="noopener"
+              class="thank-you-link">Schedule a conversation instead</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-
         <div class="footer-logo-text">
           <img src="images/logo2.png" alt="EvaluateStack" class="footer-logo" />
         </div>
-        <p class="footer-tagline">Evaluation architecture for companies that can't afford to guess.</p>
+        <p class="footer-tagline">Evaluation systems architecture for high-consequence decisions.</p>
       </div>
       <div class="footer-right">
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/rayrahails/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
           <a href="mailto:rahails@outlook.com">Email</a>
         </div>
-        <span class="footer-copy">© 2026 EvaluateStack. All rights reserved.</span>
+        <span class="footer-copy">&copy; 2026 EvaluateStack. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <!-- ─── SCRIPTS ─── -->
+  <!-- SCRIPTS -->
   <script>
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
@@ -2895,7 +2795,6 @@
       navLinks.classList.toggle('open');
     });
 
-    // Close mobile menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -2903,7 +2802,6 @@
       });
     });
 
-    // Close mobile menu on resize to desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         hamburger.classList.remove('active');
@@ -2911,25 +2809,23 @@
       }
     });
 
-    // Contact form handler (Netlify Forms with AJAX)
+    // Contact form (Netlify)
     const contactForm = document.getElementById('contactForm');
     const thankYou = document.getElementById('thankYou');
     const formTitle = document.getElementById('formTitle');
 
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
       const note = document.getElementById('formNote');
       const btn = contactForm.querySelector('.btn-cta-submit');
 
       if (!name || !email) {
-        note.textContent = 'Please fill in your name and email.';
+        note.textContent = 'Please provide your name and email.';
         note.className = 'form-note error';
         return;
       }
-
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         note.textContent = 'Please enter a valid email address.';
         note.className = 'form-note error';
@@ -2941,35 +2837,31 @@
       note.textContent = '';
 
       const formData = new FormData(contactForm);
-
       fetch('/', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
         body: new URLSearchParams(formData).toString(),
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       })
         .then(response => {
           if (response.ok) {
-            // Success: hide form, show thank-you
             contactForm.style.display = 'none';
             formTitle.style.display = 'none';
             thankYou.classList.add('visible');
           } else {
-            note.textContent = 'Something went wrong. Please try again or email rahails@outlook.com directly.';
+            note.textContent = 'Something went wrong. Email rahails@outlook.com directly.';
             note.className = 'form-note error';
             btn.innerHTML = 'Send Message <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
             btn.disabled = false;
           }
         })
         .catch(() => {
-          note.textContent = 'Something went wrong. Please try again or email rahails@outlook.com directly.';
+          note.textContent = 'Something went wrong. Email rahails@outlook.com directly.';
           note.className = 'form-note error';
           btn.innerHTML = 'Send Message <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
           btn.disabled = false;
         });
     });
   </script>
-
 </body>
 
 </html>
